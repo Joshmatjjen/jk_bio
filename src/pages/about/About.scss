@@ -1,0 +1,88 @@
+.about {
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+  &__section-left {
+    // margin-top: auto;
+    // width: 35%;
+
+    img {
+      height: 25rem;
+    }
+  }
+
+  &__section-right {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // width: 30%;
+    // justify-content: space-between;
+
+    &--social {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 90%;
+      width: 40rem;
+
+      &--content {
+        margin-top: auto;
+
+        a {
+          color: white;
+          font-size: 1.3rem;
+          margin-right: 2rem;
+
+          &:hover {
+            color: var(--color-secondary);
+          }
+        }
+      }
+    }
+
+    &--intro {
+      align-items: flex-start;
+      min-height: 25rem;
+
+      &__top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        div {
+          width: 1.6rem;
+          height: 0.1rem;
+          background-color: var(--color-secondary);
+          margin-right: 1rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+          color: var(--color-secondary) !important;
+          font-family: Comfortaa-Bold;
+          text-align: left;
+        }
+      }
+
+      .brief {
+        font-size: 1rem;
+        line-height: 2rem;
+        color: white;
+        font-family: Comfortaa-Light;
+        text-align: left;
+
+        span {
+          color: var(--color-secondary)
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,95 @@
+.home {
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  // align-items: center;
+
+  &__section-left {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+    // justify-content: space-between;
+
+    &--social {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 90%;
+      width: 40rem;
+
+      &--content {
+        margin-top: auto;
+
+        a {
+          color: white;
+          font-size: 1.3rem;
+          margin-right: 2rem;
+
+          &:hover {
+            color: var(--color-secondary);
+          }
+        }
+      }
+    }
+
+    &--intro {
+      align-items: center;
+
+      &__top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        div {
+          width: 1.6rem;
+          height: 0.1rem;
+          background-color: var(--color-secondary);
+          margin-right: 1rem;
+        }
+
+        p {
+          color: var(--color-secondary) !important;
+        }
+      }
+
+      h1 {
+        font-size: 3rem;
+        color: white;
+        font-family: Comfortaa-Bold;
+        text-align: left;
+
+        span {
+          color: var(--color-secondary)
+        }
+      }
+
+      .brief {
+        font-size: 1rem;
+        line-height: 2rem;
+        color: white;
+        font-family: Comfortaa-Light;
+        text-align: left;
+
+        span {
+          color: var(--color-secondary)
+        }
+      }
+    }
+  }
+
+  &__section-right {
+    margin-top: auto;
+    width: 35%;
+
+    img {
+      height: 45rem;
+    }
+  }
+
+}

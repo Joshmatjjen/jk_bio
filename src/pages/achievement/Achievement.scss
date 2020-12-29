@@ -1,0 +1,87 @@
+.achievement {
+  width: 90%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  margin: 0 auto;
+
+  &__top {
+    // margin-top: auto;
+    // width: 35%;
+
+    h1 {
+      font-size: 1.8rem;
+      color: var(--color-secondary);
+      font-family: Comfortaa-Bold;
+    }
+  }
+
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+
+    &--edu {
+      display: flex;
+      flex-direction: column;
+      height: 80%;
+      width: 45%;
+      // background-color: green;
+
+      &--title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 1.4rem;
+        font-family: Comfortaa-Bold;
+        text-align: center;
+        margin: 0 auto;
+
+        i {
+          color: var(--color-secondary);
+          margin: 0 0.5rem;
+        }
+
+        p {
+          color: white;
+          margin: 0 0.5rem;
+        }
+      }
+    }
+
+    &--exp {
+      display: flex;
+      flex-direction: column;
+      height: 80%;
+      width: 45%;
+      // background-color: red;
+
+      &--title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 1.4rem;
+        font-family: Comfortaa-Bold;
+        text-align: center;
+        margin: 0 auto;
+
+        i {
+          color: var(--color-secondary);
+          margin: 0 0.5rem;
+        }
+
+        p {
+          color: white;
+          margin: 0 0.5rem;
+        }
+      }
+    }
+  }
+}
