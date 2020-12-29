@@ -6,6 +6,7 @@ import { Switch, Route, Redirect, withRouter, Link } from "react-router-dom";
 import FullPageWrapper from "./FullPageWrapper";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import { useEffect, useState } from "react";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const location = useLocation();
@@ -97,6 +98,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={FullPageWrapper} />
       </Switch>
+      <ToastContainer />
     </div>
   );
 }

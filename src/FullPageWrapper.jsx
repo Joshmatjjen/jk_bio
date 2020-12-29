@@ -26,7 +26,7 @@ const FullPageWrapper = () => (
     anchors={anchors}
     navigation
     navigationTooltips={anchors}
-    sectionsColor={["#04070e", "#03060c", "#03060c", "#03060c", "#0798ec"]}
+    sectionsColor={["#04070e", "#03060c", "#04070e", "#03060c", "#0798ec"]}
     onLeave={(origin, destination, direction) => {
       console.log("onLeave event", { origin, destination, direction });
     }}
