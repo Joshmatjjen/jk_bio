@@ -2,7 +2,7 @@ import logo from "./assets/svg/logo-2.svg";
 import "./App.scss";
 import "./Header.scss";
 import "./themes/variables.scss";
-import { Switch, Route, Redirect, withRouter, Link } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 import FullPageWrapper from "./FullPageWrapper";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import { useEffect, useState } from "react";
