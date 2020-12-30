@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 4000);
   });
   return (
     <div className="App">
@@ -28,9 +28,6 @@ function App() {
           </div>
         </div>
       )}
-      <button style={{ zIndex: 3444 }} type="button">
-        Click Me!
-      </button>
       <header className="App-header">
         <Link className="Logo">
           <p>J</p>
