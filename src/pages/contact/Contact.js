@@ -38,7 +38,7 @@ const Contact = () => {
   useMemo(() => {
     status === "SUCCESS" && notify("😁 Message submitted successfully");
     status === "ERROR" && notify("😢 Message was not submitted successfully");
-  }, []);
+  }, [status]);
   return (
     <div className="section">
       <div className="contact">
