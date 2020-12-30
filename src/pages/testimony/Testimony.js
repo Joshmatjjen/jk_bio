@@ -7,17 +7,6 @@ import "react-multi-carousel/lib/styles.css";
 import "@brainhubeu/react-carousel/lib/style.css";
 
 const Testimony = () => {
-  const notify = () => {
-    console.log("Hello logs");
-    toast.dark("😁 Coming Soon!", {
-      position: "bottom-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
   };
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const testimonies = [
