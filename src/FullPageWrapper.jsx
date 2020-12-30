@@ -8,6 +8,7 @@ import "./styles.css";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Achievement from "./pages/achievement/Achievement";
+import Testimony from "./pages/testimony/Testimony";
 
 class MySection extends React.Component {
   render() {
@@ -38,7 +39,7 @@ const FullPageWrapper = () => (
           <Home />
           <About />
           <Achievement />
-          <About />
+          <Testimony />
           <MySection content={"Slide up!"} />
         </div>
       );
