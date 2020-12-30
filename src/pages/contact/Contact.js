@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import "./Contact.scss";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

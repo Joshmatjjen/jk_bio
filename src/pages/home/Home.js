@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Home.scss";
 import HomeImage from "../../assets/img/homeImage.png";
 import Typist from "react-typist";

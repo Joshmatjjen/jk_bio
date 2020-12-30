@@ -10,16 +10,6 @@ import Achievement from "./pages/achievement/Achievement";
 import Testimony from "./pages/testimony/Testimony";
 import Contact from "./pages/contact/Contact";
 
-class MySection extends React.Component {
-  render() {
-    return (
-      <div className="section">
-        <h3>{this.props.content}</h3>
-      </div>
-    );
-  }
-}
-
 const anchors = ["home", "about", "achievements", "testimony", "contact"];
 
 const FullPageWrapper = () => (
