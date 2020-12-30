@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import "./Testimony.scss";
-import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ItemsCarousel from "react-items-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "@brainhubeu/react-carousel/lib/style.css";
 
 const Testimony = () => {
-  };
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const testimonies = [
     {
