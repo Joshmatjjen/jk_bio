@@ -28,6 +28,9 @@ function App() {
           </div>
         </div>
       )}
+      <button style={{ zIndex: 3444 }} type="button">
+        Click Me!
+      </button>
       <header className="App-header">
         <Link className="Logo">
           <p>J</p>

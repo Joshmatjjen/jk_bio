@@ -9,6 +9,7 @@ import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Achievement from "./pages/achievement/Achievement";
 import Testimony from "./pages/testimony/Testimony";
+import Contact from "./pages/contact/Contact";
 
 class MySection extends React.Component {
   render() {
@@ -27,7 +28,7 @@ const FullPageWrapper = () => (
     anchors={anchors}
     navigation
     navigationTooltips={anchors}
-    sectionsColor={["#04070e", "#03060c", "#04070e", "#03060c", "#0798ec"]}
+    sectionsColor={["#04070e", "#03060c", "#04070e", "#03060c", "#03060c"]}
     onLeave={(origin, destination, direction) => {
       console.log("onLeave event", { origin, destination, direction });
     }}
@@ -40,7 +41,7 @@ const FullPageWrapper = () => (
           <About />
           <Achievement />
           <Testimony />
-          <MySection content={"Slide up!"} />
+          <Contact />
         </div>
       );
     }}

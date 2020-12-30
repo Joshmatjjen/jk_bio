@@ -1,12 +1,12 @@
-import React from "react";
-import "./Achievement.scss";
+import React, { useEffect, useMemo, useState } from "react";
+import "./Contact.scss";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Achievement = () => {
-  const notify = () => {
+const Contact = () => {
+  const notify = (message) => {
     console.log("Hello logs");
-    toast.dark("😁 Coming Soon!", {
+    toast.dark(message, {
       position: "bottom-center",
       autoClose: 5000,
       hideProgressBar: false,
@@ -16,73 +16,71 @@ const Achievement = () => {
       progress: undefined,
     });
   };
+  const [status, setStatus] = useState("");
+  const submitForm = (ev) => {
+    ev.preventDefault();
+    const form = ev.target;
+    const data = new FormData(form);
+    const xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        form.reset();
+        setStatus("SUCCESS");
+      } else {
+        setStatus("ERROR");
+      }
+    };
+    xhr.send(data);
+  };
+  useMemo(() => {
+    status === "SUCCESS" && notify("😁 Message submitted successfully");
+    status === "ERROR" && notify("😢 Message was not submitted successfully");
+  }, []);
   return (
     <div className="section">
-      <div className="achievement">
+      <div className="contact">
         {/* Title & Sub */}
-        <section className="achievement__top">
-          <h1>My Achievements</h1>
-          <p>Explore all my great achievements</p>
-        </section>
-        <section className="achievement__content">
+        <section className="contact__content">
           {/* Edu Section */}
-          <section className="achievement__content--edu">
-            <div className="achievement__content--edu--title">
-              <i class="fad fa-book-reader"></i>
-              <p>Education</p>
-            </div>
-            <div className="achievement__content--edu--list">
-              <div className="achievement__content--edu--list__box">
-                <p>September 2008 - 2014 September</p>
-                <h3>Higher Secondary School Certificate</h3>
-                <p>
-                  I had lot of great achievement being a student of Hebron
-                  college. For instance, i was one of there students, also
-                  became the School Head Prefect at my last year.
-                </p>
-                <p>Hebron College</p>
-              </div>
-              <div
-                className="achievement__content--edu--list__box"
-                onClick={notify}
-              >
-                <i class="fad fa-plus"></i>
-              </div>
-            </div>
+          <section className="contact__content--text">
+            <p>
+              Let's make something new, different and more meaningful or make
+              thing more visual or Conceptual ? <span>Just Say Hello!</span>
+            </p>
+            <p>{"-->"}</p>
           </section>
           {/* Exp Section */}
-          <section className="achievement__content--exp">
-            <div className="achievement__content--exp--title">
-              <i class="fad fa-briefcase"></i>
-              <p>Experience</p>
+          <form
+            className="contact__content--form"
+            onSubmit={submitForm}
+            action="https://formspree.io/f/mleoozpw"
+            method="POST"
+          >
+            <input type="email" name="email" placeholder="Mail Address" />
+            <input type="text" name="message" placeholder="Message" />
+            <div>
+              {/* <div className="btn" onClick={() => submitForm()}></div> */}
+              <button className="btn" type="submit">
+                Submit
+              </button>
             </div>
-            <div className="achievement__content--exp--list">
-              <div className="achievement__content--exp--list__box">
-                <p>September 2008 - 2014 September</p>
-                <h3>
-                  <span>Q</span> Quintessential
-                </h3>
-                <p>
-                  Quintessential is an investment company who believe in
-                  abundance, sustainable and consistent financial growth. They
-                  set-up and investment club, which gives it investors 25%
-                  monthly interest.
-                </p>
-                <p>CEO & Founder</p>
-              </div>
-              <div
-                className="achievement__content--exp--list__box"
-                onClick={notify}
-              >
-                <i class="fad fa-plus"></i>
-              </div>
-              Honestly, Your Profile Pics is Pulchritudinous
-            </div>
-          </section>
+          </form>
+        </section>
+        <section className="footer">
+          <p>
+            Copyright © {new Date().getFullYear()} Joshua Kayode. All rights
+            Reserved.
+          </p>
+          <p>
+            Created by <span>Ĵoshmăt</span>
+          </p>
         </section>
       </div>
     </div>
   );
 };
 
-export default Achievement;
+export default Contact;

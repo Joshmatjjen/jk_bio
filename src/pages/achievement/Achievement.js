@@ -56,8 +56,16 @@ const Achievement = () => {
               <i class="fad fa-briefcase"></i>
               <p>Experience</p>
             </div>
-            <div className="achievement__content--exp--list">
-              <div className="achievement__content--exp--list__box">
+            <div
+              className="achievement__content--exp--list"
+              onClick="location.href='YOUR-URL-HERE';"
+            >
+              <a
+                className="achievement__content--exp--list__box"
+                href="https://www.quintessentialinvestment.ng/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <p>September 2008 - 2014 September</p>
                 <h3>
                   <span>Q</span> Quintessential
@@ -69,14 +77,14 @@ const Achievement = () => {
                   monthly interest.
                 </p>
                 <p>CEO & Founder</p>
-              </div>
+              </a>
+
               <div
                 className="achievement__content--exp--list__box"
                 onClick={notify}
               >
                 <i class="fad fa-plus"></i>
               </div>
-              Honestly, Your Profile Pics is Pulchritudinous
             </div>
           </section>
         </section>

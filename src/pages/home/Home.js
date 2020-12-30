@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.scss";
 import HomeImage from "../../assets/img/homeImage.png";
+import Typist from "react-typist";
+import { useLocation } from "react-router-dom";
 
 const Home = () => {
+  const location = useLocation();
   return (
     <div className="section">
       <div className="home">
@@ -39,14 +42,36 @@ const Home = () => {
               <div></div>
               <p>HELLO</p>
             </div>
-            <h1>
-              I'm <span>Joshua</span> Kayode
-            </h1>
-            <p className="brief">
-              An <span>Innovative Entrepreneur</span>, using the skills and
-              initiative necessary to anticipate needs and bring good new ideas
-              to market
-            </p>
+            {/* <Typist.Delay ms={500} /> */}
+            {location.hash === "#home" ? (
+              <>
+                <Typist>
+                  <h1>
+                    I'm <span>Joshua</span> Kayode
+                  </h1>
+                </Typist>
+                <Typist>
+                  <Typist.Delay ms={2000} />
+                  <p className="brief">
+                    An <span>Innovative Entrepreneur</span>, using the skills
+                    and initiative necessary to anticipate needs and bring good
+                    new ideas to market
+                  </p>
+                </Typist>
+              </>
+            ) : (
+              <>
+                <h1>
+                  I'm <span>Joshua</span> Kayode
+                </h1>
+
+                <p className="brief">
+                  An <span>Innovative Entrepreneur</span>, using the skills and
+                  initiative necessary to anticipate needs and bring good new
+                  ideas to market
+                </p>
+              </>
+            )}
           </div>
         </section>
 

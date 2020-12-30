@@ -1,13 +1,15 @@
 .testimony {
   width: 90%;
   height: 100vh;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  // padding-top: 5rem;
 
   &__top {
-    margin-top: 8rem;
+
     margin-bottom: 3rem;
     // width: 35%;
 
