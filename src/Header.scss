@@ -1,3 +1,6 @@
+@import './themes/mixins.scss';
+
+// DESKTOP
 .App-header {
   position: fixed;
   top: 0;
@@ -12,8 +15,11 @@
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
   // padding: 0 8rem 0 8rem;
-
   z-index: 2;
+
+  @include respond(tabLand) {
+    display: none;
+  }
 
   .Logo {
     display: flex;
@@ -91,4 +97,170 @@
       }
     }
   }
+}
+
+
+// Mobile
+.header {
+  // background-color: transparent;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+  position: fixed;
+  width: 100%;
+  z-index: 101;
+  display: none;
+
+  @include respond(tabLand) {
+    display: block;
+  }
+
+  .Logo1 {
+    // display: block;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    // align-self: center;
+    align-items: center;
+    margin: 0.7rem 3rem;
+    margin-left: 3rem;
+
+    cursor: pointer;
+    text-decoration: none;
+    justify-content: center;
+
+    p {
+      font-family: NicoMoji-Regular;
+      font-size: 1.8rem;
+      color: white;
+      margin: 0;
+    }
+
+    .App-logo {
+
+      margin: auto 0.1rem;
+      padding-bottom: 0.3rem;
+      height: 1rem;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .App-logo {
+        animation: App-logo-spin infinite 5s linear;
+        -webkit-animation: App-logo-spin infinite 5s linear;
+      }
+    }
+  }
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: var(--color-primary);
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  // border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: none;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  height: 0;
+  //max-height: 0;
+  transition: height .2s ease-out;
+  -webkit-transition: height .2s ease-out;
+  -moz-transition: height .2s ease-out;
+  -ms-transition: height .2s ease-out;
+  -o-transition: height .2s ease-out;
+
+  p {
+    color: white;
+    font-size: 1.4rem;
+    font-family: Comfortaa-Regular;
+    margin: 0.5rem 0;
+  }
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 1.5rem 2rem;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 1.7rem;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 8px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -8px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked~.menu {
+  padding-top: 1rem;
+  height: 100vh;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+  top: 0;
 }

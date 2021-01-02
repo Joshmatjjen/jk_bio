@@ -1,3 +1,5 @@
+@import '../../themes/mixins.scss';
+
 .about {
   width: 100%;
   height: 100vh;
@@ -7,49 +9,63 @@
   align-items: center;
   margin: auto;
 
+  @include respond(tabLand) {
+    justify-content: space-around;
+  }
+
   &__section-left {
     // margin-top: auto;
     width: 25%;
 
-    img {
-      height: 25rem;
+    @include respond(tabLand) {
+      width: none;
+      // margin-right: 10rem;
+    }
+
+    @include respond(tabPort) {
+      display: none;
     }
   }
 
+  img {
+    height: 25rem;
+
+    @include respond(tabLand) {
+      height: 25rem;
+    }
+
+
+  }
+
   &__section-right {
-    height: 100%;
+    max-height: 100vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 40%;
+
     // justify-content: space-between;
-
-    &--social {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 90%;
-      width: 40rem;
-
-      &--content {
-        margin-top: auto;
-
-        a {
-          color: white;
-          font-size: 1.3rem;
-          margin-right: 2rem;
-
-          &:hover {
-            color: var(--color-secondary);
-          }
-        }
-      }
+    @include respond(tabLand) {
+      width: 60%;
     }
+
+    @include respond(tabPort) {
+      width: 70%;
+      max-height: 80vh;
+    }
+
 
     &--intro {
       align-items: flex-start;
       min-height: 25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include respond(phone) {
+        height: 58vh;
+        overflow: hidden;
+      }
 
       &__top {
         display: flex;
@@ -68,6 +84,11 @@
           color: var(--color-secondary) !important;
           font-family: Comfortaa-Bold;
           text-align: left;
+
+          @include respond(tabLand) {
+            font-size: 1.6rem;
+            margin: 0.5rem 0;
+          }
         }
       }
 
@@ -84,5 +105,4 @@
       }
     }
   }
-
 }

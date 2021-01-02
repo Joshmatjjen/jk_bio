@@ -1,9 +1,13 @@
+@import '../../themes/mixins.scss';
+
 .home {
   width: 80%;
   height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+
 
   // align-items: center;
 
@@ -15,6 +19,10 @@
     width: 60%;
     // justify-content: space-between;
 
+    @include respond(tabPort) {
+      width: 70%;
+    }
+
     &--social {
       position: relative;
       display: flex;
@@ -23,13 +31,28 @@
       height: 90%;
       width: 40rem;
 
+      @include respond(tabLand) {
+        width: 20rem;
+      }
+
       &--content {
         margin-top: auto;
+
+        @include respond(tabLand) {
+          display: flex;
+          flex-direction: column;
+          margin: auto;
+        }
 
         a {
           color: white;
           font-size: 1.3rem;
           margin-right: 2rem;
+
+          @include respond(tabLand) {
+            margin-right: 1rem;
+            margin: 2rem 0;
+          }
 
           &:hover {
             color: var(--color-secondary);
@@ -64,6 +87,10 @@
         font-family: Comfortaa-Bold;
         text-align: left;
 
+        @include respond(tabPort) {
+          font-size: 2.2rem;
+        }
+
         span {
           color: var(--color-secondary)
         }
@@ -76,6 +103,10 @@
         font-family: Comfortaa-Light;
         text-align: left;
 
+        // @include respond(tabPort) {
+        //   font-size: 0.9rem;
+        // }
+
         span {
           color: var(--color-secondary)
         }
@@ -87,8 +118,17 @@
     margin-top: auto;
     width: 35%;
 
+    @include respond(tabPort) {
+      margin: auto;
+      width: 20%;
+    }
+
     img {
       height: 45rem;
+
+      @include respond(tabPort) {
+        height: 25rem;
+      }
     }
   }
 

@@ -28,7 +28,7 @@ const Achievement = () => {
           {/* Edu Section */}
           <section className="achievement__content--edu">
             <div className="achievement__content--edu--title">
-              <i class="fad fa-book-reader"></i>
+              <i className="fad fa-book-reader"></i>
               <p>Education</p>
             </div>
             <div className="achievement__content--edu--list">
@@ -46,14 +46,14 @@ const Achievement = () => {
                 className="achievement__content--edu--list__box"
                 onClick={notify}
               >
-                <i class="fad fa-plus"></i>
+                <i className="fad fa-plus"></i>
               </div>
             </div>
           </section>
           {/* Exp Section */}
           <section className="achievement__content--exp">
             <div className="achievement__content--exp--title">
-              <i class="fad fa-briefcase"></i>
+              <i className="fad fa-briefcase"></i>
               <p>Experience</p>
             </div>
             <div
@@ -83,7 +83,7 @@ const Achievement = () => {
                 className="achievement__content--exp--list__box"
                 onClick={notify}
               >
-                <i class="fad fa-plus"></i>
+                <i className="fad fa-plus"></i>
               </div>
             </div>
           </section>
