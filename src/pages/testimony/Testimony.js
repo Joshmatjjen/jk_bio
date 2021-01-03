@@ -27,7 +27,7 @@ const Testimony = () => {
     },
     {
       comment:
-        "Working with Joshua has made me see thing in different perspective, which as being really helpful in my life",
+        "Working with Joshua has made me see things in different perspective, which has being really helpful in my life",
       name: "Joshmat JJen",
       title: "CTO at Cre8tiveTech",
       image:
