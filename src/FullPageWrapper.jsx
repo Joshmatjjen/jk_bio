@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import React, { useEffect } from "react";
+import React from "react";
 import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverflow:true
 import ReactFullpage from "@fullpage/react-fullpage";
 
@@ -10,7 +10,7 @@ import Achievement from "./pages/achievement/Achievement";
 import Testimony from "./pages/testimony/Testimony";
 import Contact from "./pages/contact/Contact";
 
-const anchors = ["home", "about", "achievements", "testimony", "contact"];
+const anchors = ["home", "about", "achievement", "testimony", "contact"];
 
 const FullPageWrapper = () => (
   <ReactFullpage
