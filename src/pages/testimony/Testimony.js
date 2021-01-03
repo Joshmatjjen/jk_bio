@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Testimony.scss";
 import "react-toastify/dist/ReactToastify.css";
 import ItemsCarousel from "react-items-carousel";
@@ -7,6 +7,15 @@ import "@brainhubeu/react-carousel/lib/style.css";
 
 const Testimony = () => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
+  console.log(window.innerWidth);
+  const [cardNum, setCardNum] = useState();
+  useEffect(() => {
+    if (window.innerWidth <= 1010) {
+      setCardNum(1);
+    } else {
+      setCardNum(2);
+    }
+  }, []);
   const testimonies = [
     {
       comment:
@@ -51,24 +60,23 @@ const Testimony = () => {
         </section>
         <section className="testimony__content">
           {/* Edu Section */}
-
           <div
             style={{
               padding: "0 60px",
-              maxWidth: 800,
+              maxWidth: window.innerWidth <= 1010 ? 600 : 800,
               margin: "0 auto",
               position: "relative",
             }}
           >
             <ItemsCarousel
               infiniteLoop={false}
-              gutter={12}
+              gutter={window.innerWidth <= 1010 ? 69 : 19}
               activePosition={"center"}
               chevronWidth={60}
               disableSwipe={false}
               alwaysShowChevrons={false}
-              numberOfCards={2}
-              slidesToScroll={2}
+              numberOfCards={cardNum}
+              slidesToScroll={window.innerWidth <= 1010 ? 1 : 2}
               outsideChevron={true}
               showSlither={true}
               firstAndLastGutter={true}
@@ -94,6 +102,11 @@ const Testimony = () => {
                 </div>
               ))}
             </ItemsCarousel>
+          </div>
+          <div className="testimony__content--scroll">
+            <i className="fad fa-long-arrow-alt-left" />
+            <p>Swipe</p>
+            <i className="fad fa-long-arrow-alt-right" />
           </div>
         </section>
       </div>

@@ -139,13 +139,66 @@
       width: 20%;
     }
 
+    @include respond(phone) {
+      display: none;
+    }
+
     img {
       height: 45rem;
 
       @include respond(tabPort) {
         height: 25rem;
       }
+
+      @include respond(phone) {
+        height: 15rem;
+      }
     }
   }
 
+  &__c-container {
+    width: 600px;
+    height: 400px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    // overflow: hidden;
+    position: relative;
+
+    &__item {
+      z-index: 100;
+      padding: 5px;
+
+      img {
+        width: 150px;
+      }
+    }
+
+    @include respond(phone) {
+      display: flex;
+    }
+
+    &__circle {
+      border-radius: 50%;
+      background-color: var(--color-secondary);
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      opacity: 0;
+      animation: scaleIn 3s infinite cubic-bezier(.36, .11, .89, .32);
+      -webkit-animation: scaleIn 3s infinite cubic-bezier(.36, .11, .89, .32);
+    }
+
+    @keyframes scaleIn {
+      from {
+        transform: scale(.5, .5);
+        opacity: .5;
+      }
+
+      to {
+        transform: scale(2.5, 2.5);
+        opacity: 0;
+      }
+    }
+  }
 }
