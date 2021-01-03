@@ -12,11 +12,7 @@ import Contact from "./pages/contact/Contact";
 
 const anchors = ["home", "about", "achievements", "testimony", "contact"];
 
-const FullPageWrapper = () => {
-  useEffect(() => {
-    document.documentElement.webkitRequestFullscreen();
-    window.scrollTo(0, 1);
-  }, []);
+const FullPageWrapper = () => (
   <ReactFullpage
     anchors={anchors}
     navigation
@@ -38,7 +34,7 @@ const FullPageWrapper = () => {
         </div>
       );
     }}
-  />;
-};
+  />
+);
 
 export default FullPageWrapper;
