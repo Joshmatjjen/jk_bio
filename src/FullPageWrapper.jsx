@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import React from "react";
+import React, { useEffect } from "react";
 import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverflow:true
 import ReactFullpage from "@fullpage/react-fullpage";
 
@@ -12,7 +12,11 @@ import Contact from "./pages/contact/Contact";
 
 const anchors = ["home", "about", "achievements", "testimony", "contact"];
 
-const FullPageWrapper = () => (
+const FullPageWrapper = () => {
+  useEffect(() => {
+    document.documentElement.webkitRequestFullscreen();
+    window.scrollTo(0, 1);
+  }, []);
   <ReactFullpage
     anchors={anchors}
     navigation
@@ -22,7 +26,7 @@ const FullPageWrapper = () => (
       console.log("onLeave event", { origin, destination, direction });
     }}
     render={({ state, fullpageApi }) => {
-      console.log("render prop change", state, fullpageApi); // eslint-disable-line no-console
+      // console.log("render prop change", state, fullpageApi); // eslint-disable-line no-console
 
       return (
         <div>
@@ -34,7 +38,7 @@ const FullPageWrapper = () => (
         </div>
       );
     }}
-  />
-);
+  />;
+};
 
 export default FullPageWrapper;
