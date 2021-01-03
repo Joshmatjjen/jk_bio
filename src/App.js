@@ -15,7 +15,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   console.log(location.hash);
   useEffect(() => {
-    document.documentElement.webkitRequestFullscreen();
+    // document.documentElement.webkitRequestFullscreen();
     window.scrollTo(0, 1);
     setTimeout(() => {
       setIsLoading(false);
