@@ -3,9 +3,10 @@
 .contact {
   width: 90%;
   height: 100vh;
+  min-height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 0 auto;
 
