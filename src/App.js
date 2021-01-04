@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="App">
       {isLoading && (
-        <div className="loader">
+        <div className="loader" style={{ height: window.innerHeight }}>
           <div className="loader__Logo">
             <p>J</p>
             <img src={logo} className="loader__Logo--App-logo" alt="logo" />
