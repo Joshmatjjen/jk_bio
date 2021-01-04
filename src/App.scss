@@ -104,11 +104,12 @@
 }
 
 .scroll-down p {
-  margin-right: -3rem;
+  margin-right: -4rem;
   margin-left: 0rem;
 
   @include respond(phone) {
     font-size: 0.7rem;
+    margin-right: -3rem;
   }
 }
 
@@ -120,4 +121,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#fp-nav.fp-right {
+  right: 10px !important;
 }
