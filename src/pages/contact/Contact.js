@@ -41,7 +41,7 @@ const Contact = () => {
   }, [status]);
   return (
     <div className="section">
-      <div className="contact">
+      <div className="contact" style={{ height: window.innerHeight }}>
         {/* Title & Sub */}
         <section className="contact__content">
           {/* Edu Section */}
