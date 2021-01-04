@@ -10,7 +10,7 @@ import Achievement from "./pages/achievement/Achievement";
 import Testimony from "./pages/testimony/Testimony";
 import Contact from "./pages/contact/Contact";
 
-const anchors = ["home", "about", "achievement", "testimony", "contact"];
+const anchors = ["home", "about", "achievements", "testimony", "contact"];
 
 const FullPageWrapper = () => (
   <ReactFullpage

@@ -141,7 +141,7 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="/#achievement"
+              href="/#achievements"
               onClick={() => {
                 checkRef.current.checked = !checkRef.current.checked;
                 setMenuOpen(!menuOpen);
@@ -149,7 +149,7 @@ const Header = () => {
             >
               <p
                 style={
-                  location.hash === "#achievement"
+                  location.hash === "#achievements"
                     ? { color: "var(--color-secondary)" }
                     : null
                 }
