@@ -8,7 +8,7 @@ const Home = () => {
   const location = useLocation();
   return (
     <div className="section">
-      <div className="home">
+      <div className="home" style={{ height: window.innerHeight }}>
         {/* Left Section */}
         <section className="home__section-left">
           <div className="home__section-left--social">

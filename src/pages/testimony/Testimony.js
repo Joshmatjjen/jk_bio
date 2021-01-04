@@ -52,7 +52,7 @@ const Testimony = () => {
   ];
   return (
     <div className="section">
-      <div className="testimony">
+      <div className="testimony" style={{ height: window.innerHeight }}>
         {/* Title & Sub */}
         <section className="testimony__top">
           <h1>Testimonials</h1>

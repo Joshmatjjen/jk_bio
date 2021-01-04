@@ -8,7 +8,7 @@ const About = () => {
   const location = useLocation();
   return (
     <div className="section">
-      <div className="about">
+      <div className="about" style={{ height: window.innerHeight }}>
         {/* Left Section */}
         <section className="about__section-left">
           <img src={HomeImage} alt="" />

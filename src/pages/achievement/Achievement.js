@@ -26,7 +26,7 @@ const Achievement = () => {
   };
   return (
     <div className="section">
-      <div className="achievement">
+      <div className="achievement" style={{ height: window.innerHeight }}>
         {/* Title & Sub */}
         {/* <section className="achievement__top">
           <h1>My Achievements</h1>
