@@ -402,7 +402,7 @@ a {
   text-decoration: none;
 }
 
-.cJeRRR {
+.rec-dot_active {
   background-color: var(--color-secondary-trans) !important;
   box-shadow: 0 0 1px 3px var(--color-secondary) !important;
 
@@ -417,7 +417,7 @@ a {
   }
 }
 
-.guuruq {
+.rec-dot {
   box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.5) !important;
 
   @include respond(tabPort) {
@@ -431,7 +431,7 @@ a {
   }
 }
 
-.iLquPE {
+.rec-arrow {
   background-color: var(--color-secondary) !important;
   color: var(--color-primary) !important;
   width: 40px !important;
