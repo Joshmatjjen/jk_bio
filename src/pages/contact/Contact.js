@@ -75,7 +75,13 @@ const Contact = () => {
             Reserved.
           </p>
           <p>
-            Created by <span>Ĵoshmăt</span>
+            Created by{" "}
+            {/* <a href="whatsapp://send?text=Hello World!&phone=+2349035982285">
+              Ĵoshmăt
+            </a> */}
+            <a href="https://wa.me/+2349035982285?text=Hello Ĵoshmăt">
+              Ĵoshmăt
+            </a>
           </p>
         </section>
       </div>
