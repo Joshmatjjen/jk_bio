@@ -405,7 +405,7 @@ a {
 }
 
 .rec-dot_active {
-  background-color: var(--color-secondary-trans) !important;
+  background-color: var(--color-secondary) !important;
   box-shadow: 0 0 1px 3px var(--color-secondary) !important;
 
   @include respond(tabPort) {
