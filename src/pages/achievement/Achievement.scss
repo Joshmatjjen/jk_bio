@@ -74,7 +74,8 @@
         font-size: 1.3rem;
         font-family: Comfortaa-Bold;
         text-align: center;
-        margin: 0 auto 0.5rem auto;
+        width: 80%;
+        margin: 0 auto 1rem auto;
 
         @include respond(tabPort) {
           font-size: 1.1rem;
@@ -236,9 +237,10 @@
         flex-direction: row;
         align-items: center;
         font-size: 1.3rem;
+        width: 80%;
         font-family: Comfortaa-Bold;
         text-align: center;
-        margin: 0 auto 0.5rem auto;
+        margin: 0 auto 1rem auto;
 
         @include respond(tabPort) {
           font-size: 1.1rem;
